@@ -2,7 +2,8 @@ public class Coustmer {
     private String id;
     private String name;
     private String phone;
-
+    private String Coustomer;//乘客类型 成人、儿童、婴儿
+    private String cardid;
     public String getId() {
         return id;
     }
@@ -35,6 +36,11 @@ public class Coustmer {
         this.cardid = cardid;
     }
 
-    private String cardid;
+    public String getCoustomer() {
+        return Coustomer;
+    }
 
+    public void setCoustomer(String coustomer) {
+        Coustomer = coustomer;
+    }
 }
