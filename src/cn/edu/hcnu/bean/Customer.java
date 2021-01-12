@@ -1,11 +1,11 @@
 package cn.edu.hcnu.bean;
 
-public class Coustmer {
+public class Customer {
     private String id;
-    private String name;
-    private String phone;
+    private String name;//姓名
+    private String phone;//电话号码
     private String Coustomer;//乘客类型 成人、儿童、婴儿
-    private String cardid;
+    private String cardid;//身份证
     public String getId() {
         return id;
     }
