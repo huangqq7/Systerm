@@ -8,17 +8,16 @@ public class Flight {
     private String destionnationAirport;//到达机场
     private String planeType;//飞机类型
     private Date deparetureitme;//出发时间
+    private String currentSeatsNum;//当前座位号
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String id) { this.id = id;
     }
 
-    public String getDepartureAirport() {
-        return departureAirport;
+    public String getDepartureAirport() { return departureAirport;
     }
 
     public void setDepartureAirport(String departureAirport) {
@@ -47,5 +46,13 @@ public class Flight {
 
     public void setDeparetureitme(Date deparetureitme) {
         this.deparetureitme = deparetureitme;
+    }
+
+    public String getCurrentSeatsNum() {
+        return currentSeatsNum;
+    }
+
+    public void setCurrentSeatsNum(String currentSeatsNum) {
+        this.currentSeatsNum = currentSeatsNum;
     }
 }
