@@ -1,3 +1,5 @@
+package cn.edu.hcnu.bean;
+
 public class Coustmer {
     private String id;
     private String name;

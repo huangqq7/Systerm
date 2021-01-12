@@ -1,3 +1,5 @@
+package cn.edu.hcnu.bean;
+
 import java.util.ArrayList;
 import java.util.List;
 

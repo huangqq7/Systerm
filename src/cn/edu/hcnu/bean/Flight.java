@@ -1,6 +1,8 @@
+package cn.edu.hcnu.bean;
+
 import java.util.Date;
 
-public class Filght {
+public class Flight {
     private String id;
     private String departureAirport;//出发机场
     private String destionnationAirport;//到达机场
