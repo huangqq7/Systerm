@@ -1,15 +1,18 @@
 package cn.edu.hcnu.bean;
 
+import java.util.Set;
+
 public class Order {
     private String id;
-    private String customerType;//乘机人类型 成人呢、婴儿、儿童
     private float airPortTax;//机场税
     private float ryf;//燃油费
     private float jptgx;//机票退改险
     private float hkzhx;//航空综合险
     private float yhj;//优惠卷
     private float hszj;//含税总价
-    private Customer customers[];
+    private float jpjg;//机票价格
+    private Set<Customer> customerSet;
+    private Flight flight;
 
     public String getId() {
         return id;
@@ -19,12 +22,28 @@ public class Order {
         this.id = id;
     }
 
-    public String getCustomerType() {
-        return customerType;
+    public float getJpjg() {
+        return jpjg;
     }
 
-    public void setCustomerType(String customerType) {
-        this.customerType = customerType;
+    public void setJpjg(float jpjg) {
+        this.jpjg = jpjg;
+    }
+
+    public Set<Customer> getCustomerSet() {
+        return customerSet;
+    }
+
+    public void setCustomerSet(Set<Customer> customerSet) {
+        this.customerSet = customerSet;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 
     public float getAirPortTax() {
@@ -75,13 +94,6 @@ public class Order {
         this.hszj = hszj;
     }
 
-    public Customer[] getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(Customer[] customers) {
-        this.customers = customers;
-    }
 }
 
 

@@ -1,15 +1,14 @@
-package cn.edu.hcnu.dao;
+package cn.edu.hcnu.bll.impl;
 
 import cn.edu.hcnu.bean.Flight;
+import cn.edu.hcnu.bll.IFlightService;
 
 import java.util.Set;
 
 //业务类调用DAO层
-public class FlightDaoIml implements IFlightDao{
+public class FlightServiceImpl implements IFlightService {
     @Override
     public void insertFlight(Flight flight) {
-
-        System.out.println("数据到达了DAO层：" + flight);
 
     }
 
