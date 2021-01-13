@@ -10,9 +10,13 @@ import java.util.Set;
 
 //业务类调用DAO层
 public class FlightServiceImpl implements IFlightService {
+    IFlightDao iFlightDao;
+
+    public FlightServiceImpl(){
+        iFlightDao=new FlightDaoIml();
+    }
     @Override
     public void insertFlight(Flight flight) throws SQLException {
-        IFlightDao iFlightDao = new FlightDaoIml();
         iFlightDao.insertFlight(flight);
 
     }

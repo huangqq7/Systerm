@@ -42,7 +42,20 @@ public class FlightDaoIml implements IFlightDao {
         String sql = "SELECT * FROM flight";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
-        ResultSet rs = pstmt.executeQuery();
+        ResultSet rs = pstmt.executeQuery();//结果集
+
+        while (rs.next()){
+            rs.getString("ID");
+            rs.getString("IFLIGHT_ID ");
+            rs.getString("I PLANE_TYPE");
+            rs.getString("TOTAL_SEATS_NUM");
+            rs.getString(" DEPARTURE_AIRPORT");
+
+            rs.getString("DESTINATION_AIRPORT");
+
+            rs.getString("DEPARTURE_TIME");
+
+        }
         return allFlights;
     }
 

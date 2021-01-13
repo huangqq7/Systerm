@@ -58,17 +58,7 @@ public class MainUI {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-            }else if(choice==2){
-                IFlightService iFlightService = new FlightServiceImpl();
-                Set<Flight> allFlights=iFlightService.getAllFlights();
-                    /*
-                    Set的遍历需要用到迭代器
-                     */
-                for(Flight flight:allFlights){
-                    System.out.println(flight);
-                }
             }
         }
     }
-
 }
