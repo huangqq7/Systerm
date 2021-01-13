@@ -61,7 +61,7 @@ public class Flight {
         this.planeType = planeType;
     }
 
-    public Date getDeparetureitme() {
+    public String getDeparetureitme() {
         return deparetureitme;
     }
 
@@ -84,4 +84,5 @@ public class Flight {
     public void setCurrentSeatsNum(int currentSeatsNum) {
         this.currentSeatsNum = currentSeatsNum;
     }
+
 }
