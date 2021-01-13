@@ -4,8 +4,13 @@ import cn.edu.hcnu.bean.Flight;
 import cn.edu.hcnu.bll.IFlightService;
 import cn.edu.hcnu.bll.impl.FlightServiceImpl;
 
+import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 //Flight增加flight属性
 public class MainUI {
     public static void main(String[] args) {
@@ -18,10 +23,12 @@ public class MainUI {
             System.out.println("按3，查询航班信息");
             System.out.println("按4，机票预订");
             System.out.println("按5，机票退订");
-            System.out.println("按6，推出系统");
+            System.out.println("按6，退出系统");
+
             int choice = sc.nextInt();
             if (choice == 1) {
-                String id = UUID.randomUUID().toString();
+
+                String id = UUID.randomUUID().toString().replace("-", "");
 
                 System.out.println("请输入航班编号");
                 String flightid = sc.next();
@@ -45,8 +52,23 @@ public class MainUI {
                         departureAirport, deparetureitme);
 
                 IFlightService iFlightService = new FlightServiceImpl();
-                iFlightService.insertFlight(flight);
+
+                try {
+                    iFlightService.insertFlight(flight);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }else if(choice==2){
+                IFlightService iFlightService = new FlightServiceImpl();
+                Set<Flight> allFlights=iFlightService.getAllFlights();
+                    /*
+                    Set的遍历需要用到迭代器
+                     */
+                for(Flight flight:allFlights){
+                    System.out.println(flight);
+                }
             }
         }
     }
+
 }

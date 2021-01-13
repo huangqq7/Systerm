@@ -1,17 +1,15 @@
 package cn.edu.hcnu.bean;
 
-import java.util.Date;
-
 public class Flight {
     private String id;//主键id，没有业务意义 UUID
     private String Flightid;//航班号
     private String departureAirport;//出发机场
     private String destionnationAirport;//到达机场
     private String planeType;//飞机类型
-    private Date deparetureitme;//出发时间
+    private String deparetureitme;//出发时间
     private int currentSeatsNum;//当前座位号
 
-    public Flight(String flightid, String departureAirport, String destionnationAirport, String planeType, Date deparetureitme, int currentSeatsNum) {
+    public Flight(String flightid, String departureAirport, String destionnationAirport, String planeType, String deparetureitme, int currentSeatsNum) {
         Flightid = flightid;
         this.departureAirport = departureAirport;
         this.destionnationAirport = destionnationAirport;
@@ -65,7 +63,7 @@ public class Flight {
         return deparetureitme;
     }
 
-    public void setDeparetureitme(Date deparetureitme) {
+    public void setDeparetureitme(String deparetureitme) {
         this.deparetureitme = deparetureitme;
     }
 

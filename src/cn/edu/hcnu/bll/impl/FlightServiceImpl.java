@@ -5,16 +5,17 @@ import cn.edu.hcnu.bll.IFlightService;
 import cn.edu.hcnu.dao.FlightDaoIml;
 import cn.edu.hcnu.dao.IFlightDao;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 //业务类调用DAO层
 public class FlightServiceImpl implements IFlightService {
     @Override
-    public void insertFlight(Flight flight) {
-        IFlightDao iFlightDao=new FlightDaoIml();
+    public void insertFlight(Flight flight) throws SQLException {
+        IFlightDao iFlightDao = new FlightDaoIml();
         iFlightDao.insertFlight(flight);
-    }
 
+    }
     @Override
     public Set<Flight> getAllFlights() {
         return null;
